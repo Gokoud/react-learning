@@ -62,6 +62,7 @@ class Clock extends React.Component {
         console.log(`当前用户的id：${currentId}`)
     }
     send(msg) {
+        // 通过 arguments 可以获得隐式传递的 event（事件对象）
         console.log(arguments)
         console.log(msg)
     }
