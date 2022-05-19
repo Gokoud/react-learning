@@ -79,7 +79,7 @@ class Clock extends React.Component {
                 <div className="outer" onClick={this.outer}>
                     <div className="inner" onClick={this.inner}></div>
                 </div>
-                <a href="#" onClick={(e) =>this.showAlert(e,1)}>
+                <a href="www.baidu.com" onClick={(e) =>this.showAlert(e,1)}>
                     点这里
                 </a>
                 <button onClick={this.send.bind(this, 'this is a prop','self')}>send Props</button>
