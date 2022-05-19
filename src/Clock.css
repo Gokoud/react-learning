@@ -1,0 +1,11 @@
+.outer {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+.inner {
+    width: 90px;
+    height: 90px;
+    background-color: aquamarine;
+}
