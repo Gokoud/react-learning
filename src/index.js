@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import Clock from "./Clock";
+import Condition from './Condition'
 import reportWebVitals from "./reportWebVitals";
 
 function formatDate(date) {
@@ -42,6 +43,7 @@ root.render(
     <React.StrictMode>
         <App />
         <Clock text="生活就像海洋" />
+        <Condition />
     </React.StrictMode>
 );
 
