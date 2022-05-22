@@ -7,6 +7,7 @@ import Condition from "./Condition";
 import reportWebVitals from "./reportWebVitals";
 import LoginControll from "./LoginControll";
 import Page from "./noRender";
+import BoilingVerdict from "./BoilingVerdict"
 
 function formatDate(date) {
     return date;
@@ -93,6 +94,7 @@ root.render(
             text="生活就像海洋"
             date={new Date().toLocaleTimeString()}
         />
+        <BoilingVerdict />
     </React.StrictMode>
 );
 
