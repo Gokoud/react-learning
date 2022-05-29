@@ -37,6 +37,7 @@ class Page extends React.Component {
         // if(true) {
         //     return null
         // }
+        console.log('render')
         return (
             <div>
                 <WarningBanner warn={this.state.showWarning} />

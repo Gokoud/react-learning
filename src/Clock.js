@@ -21,7 +21,7 @@ class Clock extends React.Component {
         this.state = {
             date: new Date(), 
             counter: 'ok',
-            arr: [0,1,2]
+            arr: '' // 这里抛出一个错误用来展示错误边界功能
         }
         this.example = this.example.bind(this);
         this.outer = this.outer.bind(this);

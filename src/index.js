@@ -8,6 +8,18 @@ import reportWebVitals from "./reportWebVitals";
 import LoginControll from "./LoginControll";
 import Page from "./noRender";
 import BoilingVerdict from "./BoilingVerdict"
+import MouseTracker from "./Mouse.js"
+
+
+// 这是返回 promise 的方式
+// const Composition = React.lazy(function() {
+//     return new Promise((resolve) => {
+//         resolve(import('./Composition'))
+//     })
+// });
+// 不直接返回 promise 的方式
+const Composition = React.lazy(() => import('./Composition'));
+
 
 function formatDate(date) {
     return date;
@@ -76,25 +88,31 @@ function NumberList(props) {
 const count = 0
 const message = ["react", "re:react", "re:Re: React"];
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const style = { display: 'none' };
 root.render(
     <React.StrictMode>
-        <div>
-        {count && <h1>Messages: {count}</h1>}
+        {/* <Composition >
+            <Clock text="生活就像海洋" />
+        </Composition> */}
+        <div style={style}>
+            <MouseTracker />
+            <div>
+            {count && <h1>Messages: {count}</h1>}
+            </div>
+            { true ? <h5>这是 h5</h5> : <h4>这是 h4</h4> }
+            <NumberList numbers={numbers} />
+            <Page demoProps={message} />
+            <MailBox unreadMessage={message} />
+            <LoginControll />
+            <App />
+            <Condition />
+            <Commen
+                author={author}
+                text="生活就像海洋"
+                date={new Date().toLocaleTimeString()}
+            />
+            <BoilingVerdict />
         </div>
-        { true ? <h5>这是 h5</h5> : <h4>这是 h4</h4> }
-        <NumberList numbers={numbers} />
-        <Page demoProps={message} />
-        <MailBox unreadMessage={message} />
-        <LoginControll />
-        <App />
-        <Clock text="生活就像海洋" />
-        <Condition />
-        <Commen
-            author={author}
-            text="生活就像海洋"
-            date={new Date().toLocaleTimeString()}
-        />
-        <BoilingVerdict />
     </React.StrictMode>
 );
 
